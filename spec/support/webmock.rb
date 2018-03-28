@@ -28,7 +28,7 @@ RSpec.configure do |config|
       .to_return(body: lookup_response)
 
     stub_request(:get, 'webservices.amazon.com/onca/xml')
-      .with(query: hash_including('Keywords' => 'return an error'))
+      .with(query: hash_including('Keywords' => 'return_an_error'))
       .to_return(status: 500)
   end
 end
