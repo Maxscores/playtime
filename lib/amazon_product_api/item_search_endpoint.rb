@@ -84,7 +84,7 @@ module AmazonProductAPI
         'Operation'       => 'ItemSearch',
         'ResponseGroup'   => 'ItemAttributes,Offers,Images',
         'SearchIndex'     => 'All',
-        'Keywords'        => query.to_s.gsub(" ", "_"),
+        'Keywords'        => query.to_s.tr(' ', '_'),
         'ItemPage'        => page.to_s
       }
 
